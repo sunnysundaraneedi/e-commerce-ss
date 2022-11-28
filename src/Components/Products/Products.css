@@ -1,0 +1,20 @@
+.filter_group {
+  margin: 100px auto 20px;
+  width: 90%;
+  background-color: #219ebc;
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.products_container {
+  width: 90%;
+  align-items: center;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
