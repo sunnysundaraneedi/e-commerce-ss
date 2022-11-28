@@ -43,6 +43,7 @@ const productsSlice = createSlice({
         state.cart = state.cart.filter((item) => item.id !== delItem.id);
       } else {
         delItem.quantity--;
+        delItem.totalPrice -= delItem.price;
       }
       state.totalQuantity--;
     },
