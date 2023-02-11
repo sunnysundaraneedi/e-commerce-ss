@@ -12,7 +12,6 @@ const Products = () => {
   );
 
   const currentUser = useSelector((state) => state.login.currentUser);
-  console.log(currentUser);
 
   const [showUserName, setShowUserName] = useState(true);
 
@@ -28,9 +27,6 @@ const Products = () => {
     getProducts();
   }, [dispatch]);
 
-  setInterval(() => {
-    setShowUserName(false);
-  }, 4000);
   return (
     <Fragment>
       <div className="filter_group">
@@ -40,13 +36,9 @@ const Products = () => {
         <div className="show-user shu">Welcome {currentUser.fullname}</div>
       )}
       <div className="products_container">
-        {!filteredProducts ? (
-          <div>Loading</div>
-        ) : (
-          filteredProducts.map((product) => (
-            <Product product={product} key={product.id} />
-          ))
-        )}
+        {filteredProducts.map((product) => (
+          <Product product={product} key={product.id} />
+        ))}
       </div>
     </Fragment>
   );
