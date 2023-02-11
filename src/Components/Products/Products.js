@@ -27,6 +27,13 @@ const Products = () => {
     getProducts();
   }, [dispatch]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setShowUserName(false);
+      console.log("hit");
+    }, 3000);
+  }, []);
+
   return (
     <Fragment>
       <div className="filter_group">
