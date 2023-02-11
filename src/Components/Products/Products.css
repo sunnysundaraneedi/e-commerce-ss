@@ -18,3 +18,14 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
+
+.show-user {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #219ebc;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  transition: 300ms;
+}

@@ -6,16 +6,19 @@ const loginSlice = createSlice({
     users: [],
     isAuthenticated: false,
     showModal: false,
+    currentUser: {},
   },
   reducers: {
     logUserIn: (state, action) => {
       const { loginEmail, loginPassword } = action.payload;
       console.log(loginEmail);
       const result = state.users.find((user) => user.data.email === loginEmail);
+      console.log(result);
       if (result) {
         if (result.data.password === loginPassword) {
           console.log("Correct Password");
           state.isAuthenticated = true;
+          state.currentUser = result.data;
         } else {
           alert("Incorrect Password");
         }
